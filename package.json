@@ -1,0 +1,14 @@
+{
+  "name": "posada911",
+  "version": "1.0.0",
+  "description": "Hotel Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Joshua Usselman",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
