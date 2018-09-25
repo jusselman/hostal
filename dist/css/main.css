@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: "Cinzel", serif; }
+  font-family: "Cinzel", serif !important; }
 
 *,
 *::after,
@@ -16,12 +16,16 @@ body, html {
   background-color: #fb8000;
   overflow: hidden;
   height: 80px;
-  position: fixed;
-  width: 100%;
+  position: fixed !important;
+  width: 60%;
   transition: .5s;
   z-index: 999;
   top: 0;
-  left: 0; }
+  left: 50%;
+  transform: translateX(-50%); }
+
+.active {
+  color: black; }
 
 .hamburger {
   padding: 5px;
@@ -42,14 +46,15 @@ body, html {
   display: inline;
   color: #fff;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  padding: 10px 16px;
+  text-decoration: none !important;
   font-size: 20px;
   transition: all .5s; }
 
 .navbar-nav {
   max-width: 1100px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  transition: all .5s ease; }
 
 li.logo {
   display: flex;
@@ -137,7 +142,7 @@ section.section-main {
       height: 50px;
       width: 150px;
       background-color: #fb8000;
-      font-family: "Cinzel", serif;
+      font-family: "Cinzel", serif !important;
       font-size: 1.5rem;
       border: none;
       color: #fff;
@@ -190,14 +195,62 @@ section.section-attractions {
     margin: 10px auto 50px auto;
     width: 50%; } }
 
-section.section-reservations {
+.section-gallery {
   height: 100vh;
+  width: 100%;
+  background-image: url("../img/gallery.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: none;
+  background-size: cover; }
+
+.section-reviews {
+  height: auto;
+  min-height: 550px;
+  width: 100%;
+  background-image: url("../img/reviewbg.jpg");
+  color: #000;
+  text-align: center; }
+  .section-reviews h1.reviews-header {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    padding-top: 75px; }
+  .section-reviews .carousel-item {
+    height: 550px; }
+  .section-reviews .carousel-control-next-icon, .section-reviews .carousel-control-prev-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+    border-radius: 100%; }
+  .section-reviews .carousel-control-prev, .section-reviews .carousel-control-next {
+    bottom: 50%;
+    transform: translateY(25%); }
+  .section-reviews img {
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    margin: 0 auto; }
+  .section-reviews p.review {
+    width: 40%;
+    margin: 50px auto;
+    font-size: 1.5rem; }
+  .section-reviews button {
+    padding: 10px;
+    border-radius: 100%;
+    margin: 25px auto;
+    font-size: 1rem; }
+
+section.section-reservations {
+  height: auto;
   width: 100%;
   background-image: url("../img/reservations.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: none;
-  background-size: cover; }
+  background-size: cover;
+  padding-bottom: 100px; }
   section.section-reservations h1.reservations-header {
     font-size: 3rem;
     color: #fff;
@@ -207,159 +260,148 @@ section.section-reservations {
     color: #fff;
     width: 40%;
     margin: 0 auto;
-    text-align: center; }
-
-.reservations-wrapper {
-  display: grid; }
-
-a {
-  text-decoration: none; }
-
-.info-text {
-  text-align: left;
-  width: 100%; }
-
-.form-group {
-  margin-bottom: 20px; }
-
-h2.heading {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-align: left;
-  color: #506982;
-  border-bottom: 1px solid #506982;
-  padding-bottom: 3px;
-  margin-bottom: 20px; }
-
-.controls {
-  text-align: left;
-  position: relative; }
-  .controls input[type="text"],
-  .controls input[type="email"],
-  .controls input[type="number"],
-  .controls input[type="date"],
-  .controls input[type="tel"],
-  .controls textarea,
-  .controls button,
-  .controls select {
-    padding: 12px;
-    font-size: 14px;
-    border: 1px solid #c6c6c6;
-    width: 100%;
-    margin-bottom: 18px;
-    color: #888;
-    font-family: 'Lato', 'sans-serif';
-    font-size: 16px;
-    font-weight: 300; }
-    .controls input[type="text"]:focus, .controls input[type="text"]:hover,
-    .controls input[type="email"]:focus,
-    .controls input[type="email"]:hover,
-    .controls input[type="number"]:focus,
-    .controls input[type="number"]:hover,
-    .controls input[type="date"]:focus,
-    .controls input[type="date"]:hover,
-    .controls input[type="tel"]:focus,
-    .controls input[type="tel"]:hover,
-    .controls textarea:focus,
-    .controls textarea:hover,
-    .controls button:focus,
-    .controls button:hover,
-    .controls select:focus,
-    .controls select:hover {
-      outline: none;
-      border-color: #9FB1C1; }
-      .controls input[type="text"]:focus + label, .controls input[type="text"]:hover + label,
-      .controls input[type="email"]:focus + label,
-      .controls input[type="email"]:hover + label,
-      .controls input[type="number"]:focus + label,
-      .controls input[type="number"]:hover + label,
-      .controls input[type="date"]:focus + label,
-      .controls input[type="date"]:hover + label,
-      .controls input[type="tel"]:focus + label,
-      .controls input[type="tel"]:hover + label,
-      .controls textarea:focus + label,
-      .controls textarea:hover + label,
-      .controls button:focus + label,
-      .controls button:hover + label,
-      .controls select:focus + label,
-      .controls select:hover + label {
-        color: #bdcc00;
-        cursor: text; }
-  .controls .fa-sort {
-    position: absolute;
-    right: 10px;
-    top: 17px;
-    color: #999; }
-  .controls select {
-    cursor: pointer; }
-  .controls label {
-    position: absolute;
-    left: 8px;
-    top: 12px;
-    width: 60%;
-    color: #999;
-    font-size: 16px;
-    display: inline-block;
-    padding: 4px 10px;
-    font-weight: 400;
-    background-color: rgba(255, 255, 255, 0);
-    background-color: white; }
-    .controls label.active {
-      top: -11px;
-      color: #555;
-      background-color: white;
-      width: auto; }
-  .controls textarea {
-    resize: none;
-    height: 200px; }
-
-button {
-  cursor: pointer;
-  background-color: #1b3d4d;
-  border: none;
-  color: #fff;
-  padding: 12px 0;
-  float: right; }
-  button:hover {
-    background-color: #224c60; }
-
-.clear:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.grid {
-  background: white; }
-  .grid:after {
-    /* Or @extend clearfix */
+    text-align: center;
+    font-size: 1.5rem; }
+  section.section-reservations .reservations-wrapper {
+    display: grid;
+    margin-top: 50px; }
+  section.section-reservations a {
+    text-decoration: none; }
+  section.section-reservations .info-text {
+    text-align: left;
+    width: 100%; }
+  section.section-reservations .form-group {
+    width: 50%;
+    margin: 0 auto; }
+  section.section-reservations h2.heading {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 3px;
+    margin-bottom: 20px; }
+  section.section-reservations .controls {
+    text-align: left;
+    position: relative; }
+    section.section-reservations .controls input[type="text"],
+    section.section-reservations .controls input[type="email"],
+    section.section-reservations .controls input[type="number"],
+    section.section-reservations .controls input[type="date"],
+    section.section-reservations .controls input[type="tel"],
+    section.section-reservations .controls textarea,
+    section.section-reservations .controls button,
+    section.section-reservations .controls select {
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid #8a8a8a;
+      width: 100%;
+      margin-bottom: 18px;
+      color: #888;
+      font-size: 16px;
+      font-weight: 300;
+      font-family: "Cinzel", serif !important; }
+      section.section-reservations .controls input[type="text"]:focus, section.section-reservations .controls input[type="text"]:hover,
+      section.section-reservations .controls input[type="email"]:focus,
+      section.section-reservations .controls input[type="email"]:hover,
+      section.section-reservations .controls input[type="number"]:focus,
+      section.section-reservations .controls input[type="number"]:hover,
+      section.section-reservations .controls input[type="date"]:focus,
+      section.section-reservations .controls input[type="date"]:hover,
+      section.section-reservations .controls input[type="tel"]:focus,
+      section.section-reservations .controls input[type="tel"]:hover,
+      section.section-reservations .controls textarea:focus,
+      section.section-reservations .controls textarea:hover,
+      section.section-reservations .controls button:focus,
+      section.section-reservations .controls button:hover,
+      section.section-reservations .controls select:focus,
+      section.section-reservations .controls select:hover {
+        outline: none;
+        border-color: #8a8a8a; }
+        section.section-reservations .controls input[type="text"]:focus + label, section.section-reservations .controls input[type="text"]:hover + label,
+        section.section-reservations .controls input[type="email"]:focus + label,
+        section.section-reservations .controls input[type="email"]:hover + label,
+        section.section-reservations .controls input[type="number"]:focus + label,
+        section.section-reservations .controls input[type="number"]:hover + label,
+        section.section-reservations .controls input[type="date"]:focus + label,
+        section.section-reservations .controls input[type="date"]:hover + label,
+        section.section-reservations .controls input[type="tel"]:focus + label,
+        section.section-reservations .controls input[type="tel"]:hover + label,
+        section.section-reservations .controls textarea:focus + label,
+        section.section-reservations .controls textarea:hover + label,
+        section.section-reservations .controls button:focus + label,
+        section.section-reservations .controls button:hover + label,
+        section.section-reservations .controls select:focus + label,
+        section.section-reservations .controls select:hover + label {
+          color: #fb8000;
+          cursor: pointer; }
+    section.section-reservations .controls .fa-sort {
+      position: absolute;
+      right: 10px;
+      top: 17px;
+      color: #999; }
+    section.section-reservations .controls select {
+      cursor: pointer; }
+    section.section-reservations .controls label {
+      position: absolute;
+      left: 8px;
+      top: 12px;
+      width: 60%;
+      color: #999;
+      font-size: 16px;
+      display: inline-block;
+      padding: 4px 10px;
+      font-weight: 400;
+      background-color: rgba(255, 255, 255, 0);
+      background-color: white; }
+      section.section-reservations .controls label.active {
+        display: none; }
+    section.section-reservations .controls textarea {
+      resize: none;
+      height: 200px; }
+  section.section-reservations button {
+    cursor: pointer;
+    background-color: #fb8000;
+    border: none;
+    color: #fff;
+    padding: 12px 0; }
+    section.section-reservations button:hover {
+      background-color: #ff8d16; }
+  section.section-reservations .clear:after {
     content: "";
     display: table;
     clear: both; }
-
-[class*='col-'] {
-  float: left;
-  padding-right: 10px; }
-  .grid [class*='col-']:last-of-type {
-    padding-right: 0; }
-
-.col-2-3 {
-  width: 66.66%; }
-
-.col-1-3 {
-  width: 33.33%; }
-
-.col-1-2 {
-  width: 50%; }
-
-.col-1-4 {
-  width: 25%; }
-
-@media (max-width: 760px) {
-  .col-1-4-sm, .col-1-3, .col-2-3 {
-    width: 100%; }
-  [class*='col-'] {
-    padding-right: 0px; } }
-
-.col-1-8 {
-  width: 12.5%; }
+  section.section-reservations .grid {
+    background: white;
+    padding: 10px; }
+    section.section-reservations .grid:after {
+      /* Or @extend clearfix */
+      content: "";
+      display: table;
+      clear: both; }
+  section.section-reservations [class*='col-'] {
+    float: left;
+    padding-right: 10px; }
+    .grid section.section-reservations [class*='col-']:last-of-type {
+      padding-right: 0; }
+  section.section-reservations .col-2-3 {
+    width: 66.66%; }
+  section.section-reservations .col-1-3 {
+    width: 50%; }
+  section.section-reservations .col-1-2 {
+    width: 50%; }
+  section.section-reservations .col-1-4 {
+    width: 50%; }
+  section.section-reservations .reservations-button {
+    margin: 0 auto 15px auto;
+    width: 33%;
+    display: block; }
+  @media (max-width: 1000px) {
+    section.section-reservations .col-1-4-sm, section.section-reservations .col-1-3, section.section-reservations .col-2-3 {
+      width: 100%; }
+    section.section-reservations [class*='col-'] {
+      padding-right: 0px; } }
+  @media (max-width: 768px) {
+    section.section-reservations .form-group {
+      width: 80%; } }
