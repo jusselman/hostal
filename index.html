@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Posada 911</title>
   <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/lightbox.min.css">
   <link rel="shortcut icon" type="image/ico" href="dist/img/agave-icon.png"/>
   <link rel="stylesheet" href="dist/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
@@ -66,17 +67,22 @@
       <h1 class="attractions-header">Renowned Attractions</h1>
       <hr class="attractions-line">
       <div class="attractions-wrapper">
-        <div class="attractions-box">
-          <a href="#"><i class="fa fa-4x fa-balance-scale sr-icons"></i></a>
+        <div class="attractions-box" id="modalClick">
+        <i class="fa fa-4x fa-balance-scale sr-icons"></i>
           <h2 class="attractions-title">El Tribunal</h2>
           <p class="attractions">This centuries old court of law
             will leave you breathless</p>
-        </div>
+          </div>
+            <div class="modal" id="modalContent">
+
+            </div>
+
         <div class="attractions-box">
-          <a href="#"><i class="fa fa-4x fas fa-haykal sr-icons"></i></a>
+          <a href="#"><i class="fa fa-4x fas fa-haykal sr-icons"></i>
           <h2 class="attractions-title">Guachi-<br>montones</h2>
           <p class="attractions">Come climb these circular
             pyramids devoted to the sun</p>
+          </a>
         </div>
         <div class="attractions-box">
           <a href="#"><i class="fa fa-4x fas fa-landmark sr-icons"></i></a>
@@ -94,61 +100,68 @@
     </section>
 
 
+<!-- GALLERY SECTION -->
     <section class="section-gallery" id="gallery">
-      <div class="container-fluid">
+      <div class="gallery">
         <h1 class="gallery-header">Our Accomodations</h1>
         <div class="row">
           <!-- <a href="#"> -->
 
             <div class="col-md-4 descOver">
-
-              <img src="dist/img/1.jpg">
-              <div class="descText">
-                <h3 class="descTitle">La Cocina</h3>
-                <p class="descBody">Never a dull moment here</p>
-              </div>
-            </a>
+              <a href="dist/img/1.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/1-thumb.jpg">
+                <div class="descText">
+                  <h3 class="descTitle">La Cocina</h3>
+                  <p class="descBody">Never a dull moment here</p>
+                </div>
+              </a>
             </div>
-          <!-- </a> -->
+
 
         <div class="col-md-4 descOver">
-          <img src="dist/img/2.jpg">
+            <a href="dist/img/2.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/2-thumb.jpg">
           <div class="descText">
             <h3 class="descTitle">La Frida</h3>
             <p class="descBody">Frida Kahlo's Favorite</p>
           </div>
+          </a>
         </div>
+
         <div class="col-md-4 descOver">
-          <img src="dist/img/3.jpg">
+            <a href="dist/img/3.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/3-thumb.jpg">
           <div class="descText">
             <h3 class="descTitle">La Rosa</h3>
             <p class="descBody">Always redolent of roses</p>
           </div>
+          </a>
         </div>
       </div>
+
         <div class="row">
         <div class="col-md-4 descOver">
-          <a href="#">
-          <img src="dist/img/4.jpg">
-        </a>
-          <div class="descText">
+            <a href="dist/img/4.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/4-thumb.jpg">
+            <div class="descText">
             <h3 class="descTitle">La Nina</h3>
             <p class="descBody">Perfect for the whole family</p>
           </div>
+          </a>
         </div>
+
         <div class="col-md-4 descOver">
-          <img src="dist/img/5.jpg">
+          <a href="dist/img/5.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/5-thumb.jpg">
           <div class="descText">
             <h3 class="descTitle">La Puerca Tuerca</h3>
             <p class="descBody">Ideal for those stubbord little piglets</p>
           </div>
+          </a>
         </div>
+
         <div class="col-md-4 descOver">
-          <img src="dist/img/6.jpg">
+          <a href="dist/img/6.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/6-thumb.jpg">
           <div class="descText">
             <h3 class="descTitle">El Mariachi</h3>
             <p class="descBody">If these walls could sing</p>
           </div>
+          </a>
           </div>
         </div>
       </div>
@@ -353,6 +366,7 @@
     <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="dist/js/main.js"></script>
     </body>
 </html>

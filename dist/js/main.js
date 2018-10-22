@@ -129,3 +129,23 @@ $(document).ready(function() {
       }
   })
 })
+
+
+// Modal for attractions sections //
+var modal = document.getElementById('modalClick');
+var modalContent = document.getElementById('modalContent');
+
+modal.addEventListener('click', openModal);
+
+window.addEventListener('click', outsideClick);
+
+
+function openModal() {
+  modalContent.style.display = 'block';
+}
+
+function outsideClick(e) {
+  if(e.target == modal) {
+  modal.style.display = 'none';
+}
+}
