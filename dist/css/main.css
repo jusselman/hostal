@@ -186,6 +186,8 @@ section.section-attractions {
   section.section-attractions p.attractions {
     font-size: 1.15rem;
     margin-top: 10px; }
+  section.section-attractions #modalClick {
+    cursor: pointer; }
   section.section-attractions .modal {
     display: none;
     position: fixed;
@@ -196,6 +198,26 @@ section.section-attractions {
     width: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5); }
+  section.section-attractions .modalContainer {
+    box-sizing: border-box;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: modalOpen;
+    animation-duration: 1s; }
+    section.section-attractions .modalContainer img {
+      width: 100%;
+      border: 2px solid #fb8000;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17); }
+
+@keyframes modalOpen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 @media (max-width: 1050px) {
   .section-attractions h1.attractions-header {
