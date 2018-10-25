@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="sr load-hidden">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
 
   <header>
     <nav class="navbar" id="nav">
-      <a href="#">
+      <a href="#" onclick="javascript:return false">
           <div class="hamburger" id="hamburger">
             <div></div>
             <div></div>
@@ -34,20 +34,21 @@
         </div>
         <div class="nav-right">
           <li><a href="#main" class="page-scroll">Home</a></li>
-          <li><a href="#about" class="page-scroll">About</a></li>
+          <li><a href="#attractions" class="page-scroll">Attractions</a></li>
           <li><a href="#gallery" class="page-scroll">Gallery</a></li>
+          <li><a href="#reviews" class="scroll">Reviews</a></li>
           <li><a href="#reservations" class="page-scroll">Reservations</a></li>
-          <li><a href="#contact" class="page-scroll">Contact</a></li>
+          <!-- <li><a href="#contact" class="page-scroll">Contact</a></li> -->
         </div>
       </ul>
     </nav>
 
     <ul class="nav-responsive">
       <li><a href="#main" class="scroll">Home</a></li>
-      <li><a href="#about" class="scroll">About</a></li>
-      <li><a href="#works" class="scroll">Accomodation</a></li>
-      <li><a href="#resume" class="scroll">Gallery</a></li>
-      <li><a href="#contact" class="scroll">Contact</a></li>
+      <li><a href="#attractions" class="page-scroll">Attractions</a></li>
+      <li><a href="#gallery" class="scroll">Accomodations</a></li>
+      <li><a href="#reviews" class="scroll">Reviews</a></li>
+      <li><a href="#reservations" class="scroll">Reservations</a></li>
     </ul>
   </header>
 
@@ -56,47 +57,157 @@
 
     <section class="section-main" id="main">
       <div class="main-header">
-      <p>Experience the land of tequila</p>
-      <h1 class="title">Posada 911</h1>
-      <p>Come see the hype from the heart of Guadalajara's historic district</p>
-      <a href="#reservations"><button class="main-button">Reserve</button></a>
+      <p class="fromUp">Experience the land of tequila</p>
+      <h1 class="title fromUp">Posada 911</h1>
+      <p class="fromDown">Come see the hype from the heart of Guadalajara's historic district</p>
+      <a href="#reservations" class="fromDown"><button class="main-button sr-contact">Reserve</button></a>
       </div>
     </section>
 
-    <section class="section-attractions">
-      <h1 class="attractions-header">Renowned Attractions</h1>
-      <hr class="attractions-line">
+    <section class="section-attractions" id="attractions">
+      <h1 class="attractions-header fromDown">Renowned Attractions</h1>
+      <hr class="attractions-line fromDown">
       <div class="attractions-wrapper">
-        <div class="attractions-box" id="modalClick">
-        <i class="fa fa-4x fa-balance-scale sr-icons"></i>
-          <h2 class="attractions-title">El Tribunal</h2>
-          <p class="attractions">This centuries old court of law
+        <div class="attractions-box">
+        <i class="fa fa-4x fas fa-landmark sr-icons"></i>
+          <h2 class="attractions-title fromDown">Teatro Degollado</h2>
+          <p class="attractions fromDown">This centuries old theatre
             will leave you breathless</p>
+            <!-- <button class="sr-icons" data-toggle="modal" data-target="#exampleModal">View</button> -->
+            <button type="button" class="modalBtn" data-toggle="modal" data-target="#exampleModal1">
+              View
+            </button>
           </div>
-            <div class="modal" id="modalContent">
-              <div class="modalContainer" id="modalContainer">
-                <img src="dist/img/court.jpg">
+          <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" style="background-color:rgba(33, 33, 33, 0.9)">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Teatro Degollado</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="modal-x">&times;</span>
+                  </button>
+                </div>
+                <div class="modBod">
+                  <img src="dist/img/court.jpg">
+                  <p class="description">
+                    Teatro Degollado is a neoclassical Mexican theater known
+                     for its diverse performances and artistic design. It is
+                      located in the central plaza of Guadalajara, Jalisco,
+                      Mexico on Belen Street between Hidalgo Avenue and Morelos
+                      Avenue. Many performances (from cultural Mexican dances
+                      to international operas) take place in this building.
+                       Meant to be a monument of Guadalajara's culture, the
+                       theater was inaugurated in September 1866; breathing
+                       life to the city through its innovative artistic beauty.
+                     </p>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div class="attractions-box">
+            <i class="fa fa-4x fas fa-cross sr-icons"></i>
+            <h2 class="attractions-title fromDown">La Catedral</h2>
+            <p class="attractions fromDown">A centuries old cathedral filled
+            with relics of the past</p>
+            <button type="button" class="modalBtn" data-toggle="modal" data-target="#exampleModal2">
+              View
+            </button>
+          <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" style="background-color:rgba(33, 33, 33, 0.9)">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">La Catedral</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="modal-x">&times;</span>
+                  </button>
+                </div>
+                <div class="modBod">
+                  <img src="dist/img/cathedral.jpg">
+                  <p class="description">
+                    The Guadalajara Cathedral or Cathedral of the Assumption
+                    of Our Lady, located in Guadalajara, Jalisco, is the Roman
+                    Catholic cathedral of the Archdioces of Guadalajara and a minor
+                    basilica. It is built in the Spanish Renaissance style, except
+                     its Neo-gothic spires. The first cathedral was built in 1541 on
+                     the site of the present Templo de Santa Maria de Gracia. This
+                      primitive church was built with adobe and a thatched roof.
+                     </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div class="attractions-box">
-          <i class="fa fa-4x fas fa-haykal sr-icons"></i>
-          <h2 class="attractions-title">Guachi-<br>montones</h2>
-          <p class="attractions">Come climb these circular
-            pyramids devoted to the sun</p>
+          <i class="fa fa-4x fas fa-palette sr-icons"></i>
+          <h2 class="attractions-title fromDown">Bellas Artes</h2>
+          <p class="attractions fromDown">Take a tour of the city's premier museum</p>
+          <button type="button" class="modalBtn" data-toggle="modal" data-target="#exampleModal3">
+            View
+          </button>
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background-color:rgba(33, 33, 33, 0.9)">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Bellas Artes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="modal-x">&times;</span>
+                </button>
+              </div>
+              <div class="modBod">
+                <img src="dist/img/museum.jpg">
+                <p class="description">
+                  This building was constructed in 1918 when General Manuel M. Diéguez
+                   was governor of Jalisco. The situation of the State of Jalisco changed
+                   with a liberal government and they thought that it was necessary to
+                   cultivate not only the land but also the mind of the authorities that
+                   were in charge of guiding the people. It was founded the way it looks
+                   now on October 12, 1925 being governor of the state José Guadalupe Zuno.
+
+                   </p>
+              </div>
+            </div>
           </div>
-        <div class="attractions-box">
-          <a href="#"><i class="fa fa-4x fas fa-landmark sr-icons"></i></a>
-          <h2 class="attractions-title">Hospital Civil</h2>
-          <p class="attractions">Guadalajara's first Hospital
-            still curing the ill</p>
         </div>
-        <div class="attractions-box">
-          <a href="#"><i class="fa fa-4x fa-heart sr-icons"></i></a>
-          <h2 class="attractions-title">Chapala</h2>
-          <p class="attractions">Fall in love all over again
-            on a gondola tour of Mexico's largest lake</p>
+      </div>
+
+
+      <div class="attractions-box">
+        <i class="fa-4x fab fa-snapchat-ghost sr-icons"></i>
+        <h2 class="attractions-title fromDown">Panteon de Belen</h2>
+        <p class="attractions fromDown">Walk amongst spirits in the state's first cemetery</p>
+        <button type="button" class="modalBtn" data-toggle="modal" data-target="#exampleModal4">
+          View
+        </button>
+      <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background-color:rgba(33, 33, 33, 0.9)">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">La Catedral</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="modal-x">&times;</span>
+              </button>
+            </div>
+            <div class="modBod">
+              <img src="dist/img/cemetery.jpg">
+              <p class="description">
+              Panteón de Belén is a historical cemetery located in Guadalajara, Mexico.
+              The cemetery is site of legends and night tours. It opened in 1848 and
+               it was formally closed in 1896. Until the construction of the Rotonda de
+               los Jalisciences Ilustres it housed the memorial for major historical
+               figures from Jalisco. Its original name was Santa Paula Cemetery and was
+               a project by Fray Antonio Alcalde. Guadalajara suffered of a large number
+                of epidemics and the conventional hospitals were unable to support the
+                 demand for medical attention.
+                 </p>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+
       </div>
     </section>
 
@@ -104,31 +215,40 @@
 <!-- GALLERY SECTION -->
     <section class="section-gallery" id="gallery">
       <div class="gallery">
-        <h1 class="gallery-header">Our Accomodations</h1>
+        <h1 class="gallery-header sr-icons">Our Accomodations</h1>
+        <div class="container-fluid">
         <div class="row">
-          <!-- <a href="#"> -->
 
-            <div class="col-md-4 descOver">
-              <a href="dist/img/1.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/1-thumb.jpg">
+
+        <div class="col-md-4">
+          <a href="dist/img/1.jpg" class="imageGal" data-lightbox="gallery" data-title="">
+            <div class="descOver sr-icons">
+                <img src="dist/img/1-thumb.jpg" class="img-gallery" style="height:100%">
                 <div class="descText">
                   <h3 class="descTitle">La Cocina</h3>
                   <p class="descBody">Never a dull moment here</p>
                 </div>
               </a>
             </div>
+          </div>
 
 
-        <div class="col-md-4 descOver">
-            <a href="dist/img/2.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/2-thumb.jpg">
+        <div class="col-md-4">
+            <a href="dist/img/2.jpg" data-lightbox="gallery" data-title="">
+              <div class="descOver sr-icons">
+              <img src="dist/img/2-thumb.jpg" class="img-gallery" style="height:100%">
           <div class="descText">
             <h3 class="descTitle">La Frida</h3>
             <p class="descBody">Frida Kahlo's Favorite</p>
           </div>
           </a>
         </div>
+      </div>
 
-        <div class="col-md-4 descOver">
-            <a href="dist/img/3.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/3-thumb.jpg">
+        <div class="col-md-4">
+            <a href="dist/img/3.jpg" data-lightbox="gallery" data-title="">
+              <div class="descOver sr-icons">
+              <img src="dist/img/3-thumb.jpg" class="img-gallery" style="height:100%">
           <div class="descText">
             <h3 class="descTitle">La Rosa</h3>
             <p class="descBody">Always redolent of roses</p>
@@ -136,28 +256,37 @@
           </a>
         </div>
       </div>
+    </div>
 
         <div class="row">
-        <div class="col-md-4 descOver">
-            <a href="dist/img/4.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/4-thumb.jpg">
+        <div class="col-md-4">
+            <a href="dist/img/4.jpg" data-lightbox="gallery" data-title="">
+              <div class="descOver sr-icons">
+              <img src="dist/img/4-thumb.jpg" class="img-gallery" style="height:100%">
             <div class="descText">
             <h3 class="descTitle">La Nina</h3>
             <p class="descBody">Perfect for the whole family</p>
           </div>
           </a>
         </div>
+      </div>
 
-        <div class="col-md-4 descOver">
-          <a href="dist/img/5.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/5-thumb.jpg">
+        <div class="col-md-4 descOver sr-icons">
+          <a href="dist/img/5.jpg" data-lightbox="gallery" data-title="">
+            <div class="descOver sr-icons">
+            <img src="dist/img/5-thumb.jpg" class="img-gallery" style="height:100%">
           <div class="descText">
             <h3 class="descTitle">La Puerca Tuerca</h3>
             <p class="descBody">Ideal for those stubbord little piglets</p>
           </div>
           </a>
         </div>
+      </div>
 
-        <div class="col-md-4 descOver">
-          <a href="dist/img/6.jpg" data-lightbox="gallery" data-title=""><img src="dist/img/6-thumb.jpg">
+        <div class="col-md-4 descOver sr-icons">
+          <a href="dist/img/6.jpg" data-lightbox="gallery" data-title="">
+            <div class="descOver sr-icons">
+            <img src="dist/img/6-thumb.jpg" class="img-gallery" style="height:100%">
           <div class="descText">
             <h3 class="descTitle">El Mariachi</h3>
             <p class="descBody">If these walls could sing</p>
@@ -166,11 +295,14 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
     </section>
 
-
-    <section class="section-reviews">
-      <h1 class="reviews-header">See what our guests have to say</h1>
+<!-- REVIEWS SECTION -->
+    <section class="section-reviews" id="reviews">
+      <div class="reviews-container">
+      <h1 class="reviews-header sr-icons">See what our guests have to say</h1>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
 
   <div class="carousel-inner">
@@ -200,6 +332,7 @@
         -Bere Velez
       </p>
     </div>
+  </div>
   </div>
   <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -255,10 +388,10 @@
 
 
     <section class="section-reservations" id="reservations">
-      <h1 class="reservations-header">
+      <h1 class="reservations-header sr-icons">
         Book one of our suites
       </h1>
-      <p class="reservations-desc">
+      <p class="reservations-desc fromDown">
         For more than 150 years, Posada 911 has been home to artists, diplomats, and travellers from all over the world
       </p>
       <div class="reservations-wrapper">
@@ -363,7 +496,7 @@
 
     </footer>
 
-
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

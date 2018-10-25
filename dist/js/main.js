@@ -1,10 +1,19 @@
+
+
 $(document).ready(function() {
   $('.hamburger').on('click', function() {
-    $('.nav-responsive').toggleClass('show');
+    $('.nav-responsive').toggleClass('showIt');
+    // $('#respNav').toggleClass('showLink');
   });
 });
 
-
+// var burgerAnim = document.getElementById('hamburger');
+// var respNav = document.getElementById('respNav');
+// var openBurger = function() {
+//   burgerAnim.addEventListener('click', function() {
+//     respNav.style.transform = "translateY(1)";
+//   })
+// }
 
 // RESERVATION SECTION //
 (function($){
@@ -109,9 +118,23 @@ $('a[href^="#"]').click(function() {
 //     }
 //   })
 // });
+// var mobileNav = function() {
+// if(window.innerWidth < 769) {
+//   var naving = document.getElementById('nav');
+//   naving.style.width = "100%";
+// }
+// }
+//
+// mobileNav();
+// if(window.innerWidth < 769) {
+//
+// }
+
 
 
 // Change navbar on scroll //
+
+// if ($(window).width > 769) {
 $(document).ready(function() {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -125,27 +148,71 @@ $(document).ready(function() {
         $('#nav').css('width', '60%');
         $('#mainNav').css('margin', "25px auto");
 
-
       }
-  })
-})
+
+    })
+    });
+
+  // };
+
+  // else {
+  //     $('#nav').css('width', '100%');
+  //    }
+
+  // (innerWindow < 769) {
+
+
+
 
 
 // Modal for attractions sections //
-var modalClick = document.getElementById('modalClick');
-var modalContent = document.getElementById('modalContent');
+// var modalClick = document.getElementById('modalClick');
+// var modalContent = document.getElementById('modalContent');
+// // var attrArray = [1,2,3,4];
+// //
+// // for(i = 0; i < attrArray.length; i++) {
+// //
+// // }
+//
+// modalClick.addEventListener('click', openModal);
+//
+// window.addEventListener('click', outsideClick);
+//
+//
+// function openModal() {
+//   modalContent.style.display = 'block';
+// }
+//
+// function outsideClick(e) {
+//   if(e.target !== modalClick) {
+//   modalContent.style.display = 'none';
+// }
+// }
 
-modalClick.addEventListener('click', openModal);
-
-window.addEventListener('click', outsideClick);
 
 
-function openModal() {
-  modalContent.style.display = 'block';
-}
-
-function outsideClick(e) {
-  if(e.target !== modalClick) {
-  modalContent.style.display = 'none';
-}
-}
+window.sr = ScrollReveal();
+  sr.reveal('.fromUp', {
+    duration: 3000,
+    origin: 'top',
+    distance: '200px'
+  });
+  sr.reveal('.fromDown', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '200px'
+  });
+  sr.reveal('.sr-icons', {
+    duration: 3000,
+    scale: 0.3,
+    distance: '0px'
+  }, 200);
+  sr.reveal('.sr-button', {
+  duration: 1000,
+  delay: 200
+});
+sr.reveal('.sr-contact', {
+  duration: 600,
+  scale: 0.3,
+  distance: '0px'
+}, 300);
